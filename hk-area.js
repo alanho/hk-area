@@ -1,12 +1,14 @@
-import fs from "fs";
-import PolygonLookup from "polygon-lookup";
+var PolygonLookup = require("polygon-lookup");
 
 let features;
 
+const loadFeaturesJSON = () => {
+  features = require("./data/hk_boundaries_simplified.json");
+};
+
 const getHKArea = (lat, long) => {
   if (features == undefined) {
-    const data = fs.readFileSync("./data/hk_boundaries_simplified.json");
-    features = JSON.parse(data);
+    loadFeaturesJSON();
   }
 
   var lookup = new PolygonLookup(features);
@@ -18,4 +20,5 @@ const getHKArea = (lat, long) => {
     return null;
   }
 };
-export { getHKArea };
+
+module.exports = getHKArea;

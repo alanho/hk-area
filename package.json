@@ -1,18 +1,19 @@
 {
   "name": "hk-area",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Return the area (NT, Kowloon, HK, Island) of a given coorindates",
-  "main": "index.js",
-  "module": "main.js",
-  "type": "module",
+  "main": "hk-area.js",
   "scripts": {
-    "test": "mocha index.test.js"
+    "test": "mocha hk-area.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alanho/hk-area"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "esm": "^3.2.25",
     "polygon-lookup": "^2.6.0"
   },
   "devDependencies": {

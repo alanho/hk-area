@@ -1,5 +1,5 @@
-import { getHKArea } from "./main.js";
-import assert from "assert";
+const getHKArea = require("./hk-area.js");
+const assert = require("assert");
 
 describe("return correct area", function () {
   it("returns HK for coorindates in Hong Kong Island", function () {
@@ -24,6 +24,13 @@ describe("return correct area", function () {
 
   it("returns null for coorindates outside of Hong Kong", function () {
     let area = getHKArea(50.44946647646575, 30.5255055129873);
+    assert.equal(area, null);
+  });
+});
+
+describe("handle parameter edge cases", function () {
+  it("returns null for any null coorindates", function () {
+    let area = getHKArea(null, 114.16593951084764);
     assert.equal(area, null);
   });
 });
