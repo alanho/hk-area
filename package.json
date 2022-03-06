@@ -1,0 +1,21 @@
+{
+  "name": "hk-area",
+  "version": "1.0.0",
+  "description": "Return the area (NT, Kowloon, HK, Island) of a given coorindates",
+  "main": "index.js",
+  "module": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha index.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "polygon-lookup": "^2.6.0"
+  },
+  "devDependencies": {
+    "mocha": "^9.2.1"
+  }
+}
