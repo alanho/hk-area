@@ -23,7 +23,7 @@ yarn add hk-area
 ## Example
 
 ```javascript
-import { getHKArea } from "hk-area";
+import getHKArea from "hk-area";
 
 let area = getHKArea(22.203350936422417, 113.86662909332935);
 console.log(area); // HK
